@@ -1,0 +1,62 @@
+<!-- start  ArticleMultiMediaListItemBRIGHTCOVE.pbo -->
+
+<script type="text/javascript">
+  //check if libraries are loaded
+if(typeof(AssetsModalScript)=='undefined')
+    {
+        document.write('<scr' + 'ipt type="text/javascript" src="http://sstapleton-development.mn1.dc.publicus.com/js/embeds/AssetsModal.js"></scr' + 'ipt>')
+    }
+if(typeof(AssetsBrightCoveScript)=='undefined')
+    {
+        document.write('<scr' + 'ipt type="text/javascript" src="http://sstapleton-development.mn1.dc.publicus.com/js/embeds/AssetsBrightCove.js"></scr' + 'ipt>');
+    }
+</script>
+
+<script>
+     
+     /*
+defaults that are changeable below:
+     
+                'height': '270',
+                'width': '480',
+                '@videoPlayer': AssetUrl,
+                'playerKey': 'AQ~~,AAABmA9XpXk~,-Kp7jNgisreaNI4gqZCnoD2NqdsPzOGP',
+                'playerID': '1925363807001',
+                 'selector': 'div#AssetDialog',
+                'title':'<%FileDescription%>',
+                'footer':footer
+     
+      */
+     //change if you want to add ad tags or something else at the bottom of the popup
+     //var footer="<div>Sponsored by our sponsors.</div>";
+     var footer = '';
+
+   $(function () {
+           AssetDOMId="<%MediaTypeExt%>-<%Counter%>";
+         AssetUrl=$("a#"+AssetDOMId).attr("brightcove");
+            var AssetSettings = {
+                'height': '270',
+                'width': '480',
+                '@videoPlayer': AssetUrl,
+                'playerKey': 'AQ~~,AAABmA9XpXk~,-Kp7jNgisreaNI4gqZCnoD2NqdsPzOGP',
+                'playerID': '1925363807001',
+                 'selector': 'div#AssetDialog',
+                'title':'<%FileDescription%>',
+                'footer':footer
+            };
+       
+         
+         $("a#"+AssetDOMId).AssetPopup(AssetSettings);
+ 
+     });
+
+</script>
+
+
+
+
+
+<li><a href="/videos" id="<%MediaTypeExt%>-<%Counter%>" class="brightcove" brightcove="<%ExternalURL%>"><strong>Video</strong>: <%FileDescription%></a></li>
+
+
+<!-- end ArticleMultiMediaListItemBRIGHTCOVE.pbo -->

@@ -1,0 +1,21 @@
+<!-- start shared ArticleMultiMediaListItem1.pbo 
+This is the fallback file if there is not an extension-specific file.
+
+-->
+
+
+     
+[%{@SiteDebug=1}
+     begin ArticleMultiMediaListItem1.pbo
+     Extension:<%MediaTypeExt%><br />
+     Embedded?: <%Embed%><br />
+     External URL: <%ExternalURL%><br />
+     File Description: <%FileDescription%><br />
+     File Name: <%FileName%><br />
+     Link: <%Link%><br />
+     Counter: <%Counter%><br />
+%]
+
+
+     <li><a href="<%Link%>"><%MediaDescription%>:</a> <%FileDescription%></li>
+<!-- end ArticleMultiMediaListItem1.pbo -->
