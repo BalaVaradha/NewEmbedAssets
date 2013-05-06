@@ -1,0 +1,48 @@
+<script>
+   //check if libraries are loaded
+
+if(typeof(AssetsYouTubeScript)=='undefined'){
+
+        document.write('<scr' + 'ipt type="text/javascript" src="http://sstapleton-development.mn1.dc.publicus.com/js/embeds/AssetsYouTube.js"></scr' + 'ipt>');
+    }
+</script>
+<script>
+/*
+defaults that are changeable below:
+   
+         'assetId': '',
+        'title': '',
+        'idAttribute': 'rel',
+        'cssClass': '',
+        'modal': false,
+        'width': 420,
+        'height': 315,
+        'hideTitleBar': false,
+        'clickOutsideClose': false,
+        'autohide': 2,
+        'autoplay': 0,
+        'color': 'blue',
+        'controls': 1,
+        'fs': 0,
+        'loop': 0,
+        'showinfo': 0,
+        'theme': 'light',
+        'footer': ''
+
+*/
+
+
+     
+ $(function () {
+     var <%Extension%><%ID%>_EmbedSettings = {
+        'height': 315,
+         'width': 420,
+        'url': '<%ExternalURL%>'
+      };
+
+       var <%Extension%><%ID%>EmbedContent =CreateEmbedContent(<%Extension%><%ID%>_EmbedSettings);
+            $('div#embed-header').append(<%Extension%><%ID%>EmbedContent);
+          
+ });
+      
+  </script>

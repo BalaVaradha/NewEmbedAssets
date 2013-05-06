@@ -1,0 +1,85 @@
+		<div class="span4">
+			<article id="main-story" class="full-story">
+				<div class="body">
+					<div class="advertisement"></div>
+						<div class="article">  
+							<div class="hnews hentry item">
+								<header id="article-top">
+									<pbs:macro name="BreadcrumbNavigation" CacheTime="1440" CacheQualifiers="@MainProfileID" EndNode=1 PageType="Article" ObjectClass='Breadcrumb'>
+									<%Head%>
+									<%MainPicture%>
+									<pbs:script Name="GetArticleMediaFiles.php5" StorySite="<%Site%>" StoryDate="<%ISOPublishedDate%>" StoryCategory="<%Category%>" StoryID="<%ArtNo%>" IncludeMediaFileTypes="<%HeaderAssetsInclude%>"  ExcludeMediaFileTypes="<%HeaderAssetsExclude%>"  AssetCount=0 MediaCount=1 SortOrder=2 Test=0 ObjectName="ArticleMediaFileEmbed" ObjectClassNumber=1>
+								</header>
+								<!-- %ThumbnailGallery rows=0 % -->
+								<div style="display:none;"><pbs:!macro CacheQualifiers="storyID,storyVersion" Cachetime="10" name=APNewsRegistry_Article storyID="<%Site%><%ISOPublishedDate$d("yyyy")%><%ArtNo%>" storyVersion="d<%IsoModifiedDate$d("yyyymmdd")%>t<%IsoModifiedDate$d("hhnnss")%>" Byline="<%Byline$r("\s+= ","""='")%>" content="<%ParagraphItems$tc(1,100)r("\s+= ","""='")%>">
+									<a rel="item-license" href="<pbs:#global# object="<%AppsEnvironmentURL%>">/utils/uiincludes/termsofuse.php">Copyright <pbs:#global# object="<%currentdate$d("yyyy")%>"> <pbs:#global# object="<%SiteName%>">. All rights reserved. This material may not be published, broadcast, rewritten or redistributed.</a>
+									<pbs:script language="vbscript" name="APNewsRegistry_Byline" SiteID="<%@SiteID%>" Byline="<%Byline$r("\s+= ","""='")%>" content="<%ParagraphItems$tc(1,100)r("\s+= ","""='")%>">
+									<span class="updated" title="<%IsoModifiedDate$d("yyyy-mm-dd")%>T<%IsoModifiedDate$d("hh:nn:ss")%>-0700"><%IsoModifiedDate$d("mmmm, d yyyy h:nn am/pm")%></span>
+								</div>
+							</div>
+							<section id="body-text" class="shorten">
+							[%{ISOPublishedDate!=999999990001} [%{comments=1} Do not do this for leaf pages %]
+								<div class="byline-bar">
+									<%Byline%>
+									<div class="meta">
+										<p class="timestamp">
+									 		Posted: 
+                    			 		<time datetime=""><pbs:script name="formatDate.php5" date="<%ISOPublishedDate%>" format="m/d/y, g:i A T"></time>
+									 		<span class="divider">|</span>
+									 		[%{ISOPublishedDate!#IsoModifiedDate#}<time datetime="">Updated: <%ModifiedDate$S("DateCalc.php5")%> HOURS AGO</time>%]
+								  		</p>
+									</div><!-- /meta -->
+							 	</div><!-- /byline-bar -->
+							 %]
+							 <div id="body-copy">
+								 <%ThumbnailItems%>
+								 <%ParagraphItems%>
+							 </div><!--/body-copy-->
+							 <pbs:article useobject=1 objectclass=3 Summary=0 Byline=1 Header=0 Facts=0 Extrapictures=0 Title=0 Title2=0 Karakter=0 Tip=0 Text=0 Image=0 Published=0 Modified=0 HotLinks=0>
+							 </section><!-- /body-text -->
+							[%{ISOPublishedDate!=999999990001} [%{comments=1} Do not do this for leaf pages %]
+								<section id="supporting-content">
+									<%ExtraPictures%>
+									<div class="story-links">
+										<ul>
+											<li><i class="icon-comment"></i><a href="#comments">Comments</a></li>
+											<li><i class="icon-print"></i><a href="">Print</a></li>
+											<style>.at300b span{display:none;}</style>
+											<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=<%addThisPubId%>"></script>
+											<li><i class="icon-email"></i><a href="http://www.addthis.com/bookmark.php" class="addthis_button_email">Email</a></li>
+											<li><i class="icon-star"></i><a href="#we-recommend">Recommended</a></li>
+										</ul>
+									</div><!--/story-links-->
+									<%ConnectedMedia%>
+									<%ConnectionItems%>
+									<%Facts%>
+									<div class="poll"></div>
+								</section>
+							%]
+						<!--
+							 <div class="extrafields">
+							  ContentId = <%field_ContentId%><Br>
+							  SectionAnchor = <%field_SectionAnchor%><br>
+							  SeoDescription = <%field_SeoDescription%><br>
+							 </div>
+						-->
+						</div>
+					</div>
+				</article>
+				[%{ISOPublishedDate!=999999990001} [%{comments=1} Do not do this for leaf pages %]
+				<div id="we-recommend">
+					<div class="link-list span2">
+						<!-- p b s:newslist useobjects=1   Objectclass=103 multisite=1 count=4 days=199 Refant=1 Showref=500 ParagraphCount=0 ExternalLinks=0 Extrapictures=0 Image=1 InternalLinks=0 KeywordLinks=0 Leadin=0 Multimedia=0 ProfileHeader=0 Source=0 Teaser=0 ThemeLinks=0 profile="<%@MainProfileID%>" priosort=1 Noduplicates=1 SynchID=123 site="<%LocalSite%>,<%SharedSite%>" -->
+						<pbs:contentstats useobjects=1 interval="30days" Objectclass=103 count=4 profile="<%@MainProfileID%>" >
+					</div>
+					<div class='link-list span2'>
+						<pbs:newslist useobjects=1 Objectclass=104 multisite=1 count=4 days=199 Refant=1 Showref=500 ParagraphCount=0 ExternalLinks=0 Extrapictures=0 Image=1 InternalLinks=0 KeywordLinks=0 Leadin=0 Multimedia=0 ProfileHeader=0 Source=0 Teaser=0 ThemeLinks=0 profile="<%@MainProfileID%>" priosort=1 Noduplicates=1 SynchID=123 site="<%LocalSite%>,<%SharedSite%>" Profilelink=0>
+					</div>
+				</div> <!-- #we-recommend -->
+            	<pbs:!macro name="NewsToGram" cachetime="30">
+				<div id="comments">
+					<h4>Join the Conversation</h4>
+					<div id="disqus_thread"></div>
+				</div>
+				%]
+			</div>

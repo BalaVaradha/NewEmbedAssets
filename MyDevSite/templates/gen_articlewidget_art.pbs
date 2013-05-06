@@ -1,0 +1,21 @@
+<pbs:!macro name="StartPage" cachetime="1440">
+<pbs:!macro before name="GlobalVars">
+<pbs:macro before name="GlobalVars">
+<pbs:!macro before name="StartHead" cachetime="1440" CacheQualifiers="Date,Category,@StoryId,urrProfile">
+<pbs:!macro before name="meta" cachetime="1440" CacheQualifiers="Date,Category,@StoryId,urrProfile">
+<pbs:!macro before name="Css" cachetime="1440">
+<pbs:!macro before name="JsHead" cachetime="1440" CacheQualifiers="Date,Category,@StoryId,CurrProfile">
+<pbs:!macro before name="FinishHead" cachetime="1440" CacheQualifiers="Date,Category,@StoryId,CurrProfile">
+<pbs:!macro before name="Omniture1" cachetime="1440">
+<section id="content" class="container-fluid">
+    <div class="row-fluid">
+        <!-- This article call will be used for all standard data -->
+        <pbs:article useobject=1 objectclass=1 Summary=0 Byline=1 Header=1 Facts=1 Extrapictures=1 Title=1 Title2=1 Karakter=0 Tip=0 Text=1 Image=1 Published=0 Modified=0 HotLinks=1>
+        <pbs:!macro name="RightSideRail" cachetime="180">
+    </div> <!-- .row-fluid -->
+</section>
+<!--<p bs:!macro name="Buffer" cachetime="1440" >--><!-- TODO Intentionally broken for right now -->
+<pbs:macro name="ContextualAd">
+<pbs:!macro name="JsFoot" cachetime="1440" CacheQualifiers="Date,Category,@StoryId,CurrProfile">
+<pbs:!macro name="Footer" cachetime="1440">
+<pbs:!macro name="FinishPage" cachetime="1440">

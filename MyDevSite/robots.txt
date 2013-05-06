@@ -1,0 +1,25 @@
+# Robots.txt
+# Be nice.
+#
+User-agent: MSIECrawler
+Disallow: /
+#
+User-agent: *
+Disallow: /apps/pbcs.dll/classifieds
+Disallow: /apps/pbcs.dll/events
+Disallow: /apps/pbcs.dll/index
+Disallow: /apps/pbcs.dll/news
+Disallow: /apps/pbcs.dll/temaoversikt
+Disallow: /apps/pbcs.dll/related
+Disallow: /apps/pbcs.dll/misc
+Disallow: /apps/pbcs.dll/error
+Disallow: /apps/pbcs.dll/search
+Disallow: /apps/pbcsi.dll
+Disallow: /apps/pbcsad.dll
+Disallow: /apps/rub.dll
+Disallow: /logs/
+Disallow: /graphics/
+Disallow: /.cache/
+Disallow: /templates/
+Disallow: /includes/
+

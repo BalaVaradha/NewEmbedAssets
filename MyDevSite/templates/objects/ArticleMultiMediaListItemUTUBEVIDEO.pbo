@@ -1,0 +1,70 @@
+<!-- start  ArticleMultiMediaListItemUTUBEVIDEO.pbo -->
+
+<script type="text/javascript">
+  //check if libraries are loaded
+if(typeof(AssetsModalScript)=='undefined')
+    {
+        document.write('<scr' + 'ipt type="text/javascript" src="http://sstapleton-development.mn1.dc.publicus.com/js/embeds/AssetsModal.js"></scr' + 'ipt>')
+    }
+if(typeof(AssetsYouTubeScript)=='undefined')
+    {
+        document.write('<scr' + 'ipt type="text/javascript" src="http://sstapleton-development.mn1.dc.publicus.com/js/embeds/AssetsYouTube.js"></scr' + 'ipt>');
+    }
+</script>
+
+
+
+<script>
+     
+     /*
+defaults that are changeable below:
+     
+        'youtubeId': '',
+        'title': '',
+        'useYouTubeTitle': true,
+        'idAttribute': 'rel',
+        'cssClass': '',
+        'draggable': false,
+        'modal': true,
+        'width': 640,
+        'height': 480,
+        'hideTitleBar': false,
+        'clickOutsideClose': false,
+        'overlayOpacity': 0.5,
+        'autohide': 2,
+        'autoplay': 1,
+        'color': 'red',
+        'controls': 1,
+        'fs': 1,
+        'loop': 0,
+        'showinfo': 0,
+        'theme': 'light',
+        'footer': ''
+     
+      */
+     //change if you want to add ad tags or something else at the bottom of the popup
+     //var footer="<div>Sponsored by our sponsors.</div>";
+     var footer = '';
+     $(function () {
+         AssetDOMId="<%MediaTypeExt%>-<%Counter%>";
+         AssetUrl=$("a#"+AssetDOMId).attr("href");
+         var AssetSettings = {
+             autoplay: 0,
+             'fs': 0,
+             'color':'green',
+             'title':'<%FileDescription%>',
+             'footer':footer,
+             'url': AssetUrl
+         };
+         
+         
+         $("a#"+AssetDOMId).AssetPopup(  AssetSettings);
+     });
+
+</script>
+
+
+<li><a href="<%ExternalURL%>" id="<%MediaTypeExt%>-<%Counter%>" class="youtube"><strong>Video</strong>: <%FileDescription%></a></li>
+
+
+<!-- end ArticleMultiMediaListItemUTUBEVIDEO.pbo -->

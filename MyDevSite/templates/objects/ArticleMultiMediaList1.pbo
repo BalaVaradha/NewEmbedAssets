@@ -1,0 +1,19 @@
+[%{MediaItems}
+<script type="text/javascript">
+  //load JQuery UI if it is not loaded yet
+    if   (!jQuery.ui)  
+    {
+        document.write('<scr' + 'ipt type="text/javascript" src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></scr' + 'ipt>');
+        document.write('<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css" />');
+
+    }
+</script>
+<div id="related-stories" class="link-list">
+    <h4>More</h4>
+    <ul>
+        <%MediaItems%>
+    </ul>
+</div><!--/related-stories-->
+
+
+%]

@@ -1,0 +1,28 @@
+<script>
+   //check if libraries are loaded
+
+if(typeof(AssetsBrightCoveScript)=='undefined'){
+
+        document.write('<scr' + 'ipt type="text/javascript" src="http://sstapleton-development.mn1.dc.publicus.com/js/embeds/AssetsBrightCove.js"></scr' + 'ipt>');
+    }
+</script>
+
+<div id="player">player is here</div>
+<script>
+$( function() {
+
+            var EmbedSettings = {
+                'height': '270',
+                'width': '480',
+                '@videoPlayer': '1754276221001',
+                'playerKey': 'AQ~~,AAABmA9XpXk~,-Kp7jNgisreaNI4gqZCnoD2NqdsPzOGP',
+                'playerID': '1925363807001'
+            };
+
+// Initialize the jQuery Brightcove Video plugin
+$( "#embed-header" ).brightcoveVideo(EmbedSettings);
+ 
+
+} );
+</script>
+
