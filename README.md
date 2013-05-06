@@ -1,0 +1,4 @@
+EmbeedAssets
+============
+
+New Embedded Assets
